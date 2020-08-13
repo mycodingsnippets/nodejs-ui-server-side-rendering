@@ -10,7 +10,7 @@ app.engine('hbs', expbs({
     partialsDir: path.join(__dirname,'views/partial'),
     extname: 'hbs'
 }));
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname,'public')));
 
 //Routing
 app.get('/', (req, res) => {
@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
            {user: "Dev",tweet:"Tweet4"},
        ],
        scripts: [
-           '/js/test.js'
+           'test.js'
        ]
    });
 });
