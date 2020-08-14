@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.render('pages/learning/hbsfeatures', {
+    res.render('pages/testing/hbsfeatures', {
         title: 'Home',
         name: 'Aditya',
         isImportant: false,
