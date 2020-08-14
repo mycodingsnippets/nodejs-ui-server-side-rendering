@@ -1,7 +1,11 @@
 const express = require('express');
-const app = express();
 const expbs = require('express-handlebars');
 const path = require('path');
+
+const hbsfeatures = require('./routes/testing/hbsfeatures');
+
+const app = express();
+
 
 app.set('view engine', 'hbs');
 app.engine('hbs', expbs({
@@ -13,23 +17,7 @@ app.engine('hbs', expbs({
 app.use(express.static(path.join(__dirname,'public')));
 
 //Routing
-app.get('/', (req, res) => {
-   res.render('index', {
-       title: 'Home',
-       name: 'Aditya',
-       isImportant: false,
-       isLoggedIn: false,
-       tweets: [
-           {user: "Aditya",tweet:"Tweet1"},
-           {user: "Aaina",tweet:"Tweet2"},
-           {user: "Mamta",tweet:"Tweet3"},
-           {user: "Dev",tweet:"Tweet4"},
-       ],
-       scripts: [
-           'test.js'
-       ]
-   });
-});
+app.use('/testing/hbs', hbsfeatures);
 
 app.listen(4400, () => {
    console.log(`Server is starting at port 4400`);
