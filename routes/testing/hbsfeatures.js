@@ -14,10 +14,10 @@ router.get('/', (req, res) => {
             {user: "Dev",tweet:"Tweet4"},
         ],
         scripts: [
-            'test.js'
+            '/js/testing/test.js'
         ],
         styles: [
-            'test.css'
+            '/css/testing/test.css'
         ]
     });
 });
