@@ -1,0 +1,6 @@
+1) % is the unit for Responsiveness.
+   rem should be used for font size management which depends on root element font which should be specified in %. (Eg Resource - Thapa Technical)
+   Medias (images/videos) can be make responsive using %. (Eg Resource - Flatiron School Notes)
+
+2) Library is Required for Layouts and to make those layouts responsive (Workable on all screens).
+   Bootstrap, Grid/Flexbox/Media Queries is the best tool for responsive layouts.
