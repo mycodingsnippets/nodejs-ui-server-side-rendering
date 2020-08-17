@@ -5,7 +5,8 @@ require('dotenv').config();
 
 //Routes
 const hbsfeatures = require('./routes/testing/hbsfeatures');
-const portfolio = require('./routes/portfolio/main');
+const cssprops = require('./routes/testing/cssprops');
+const portfolio = require('./routes/portfolioOne/main');
 
 const app = express();
 
@@ -20,7 +21,8 @@ app.use(express.static(path.join(__dirname,'public')));
 
 //Routing Middlewares
 app.use('/testing/hbs', hbsfeatures);
-app.use('/', portfolio);
+app.use('/testing/css', cssprops);
+app.use('/portfolio-one', portfolio);
 
 app.listen(4400, () => {
    console.log(`Server is starting at port 4400`);

@@ -3,8 +3,8 @@ const router = express.Router();
 
 const portfolioStyles = [
     process.env.BOOTSTRAP_CSS_PATH,
-    '/css/portfolio/font-awesome.css',
-    '/css/portfolio/style.css'
+    '/css/portfolioOne/font-awesome.css',
+    '/css/portfolioOne/style.css'
 ];
 
 const portfolioScripts = [
@@ -13,7 +13,7 @@ const portfolioScripts = [
 ];
 
 router.get('/', (req, res) => {
-    res.render('pages/portfolio/index',{
+    res.render('pages/portfolioOne/index',{
         title: 'Home',
         styles: portfolioStyles,
         scripts: portfolioScripts

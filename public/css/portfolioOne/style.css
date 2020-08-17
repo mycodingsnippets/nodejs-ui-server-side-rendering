@@ -42,7 +42,7 @@ header{
 
 .banner{
     position: relative;
-    background: url(../../img/portfolio/bg.jpg) no-repeat;
+    background: url(../../img/portfolioOne/bg.jpg) no-repeat;
     min-height: 100vh;
     background-size: cover;
     background-position: center;

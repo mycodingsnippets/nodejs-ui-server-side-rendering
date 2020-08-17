@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
     res.render('pages/testing/hbsfeatures', {
-        title: 'Home',
+        title: 'HBS',
         name: 'Aditya',
         isImportant: false,
         isLoggedIn: false,
