@@ -1,0 +1,88 @@
+.top-banner-section{
+    display: grid;
+    grid-template-columns: 1fr; /* Stretch to full frame of browser (length wise) => may not work on image so deal with it separately */
+    grid-template-rows: 350px; /* Stretch to given tallness (height wise) */
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    align-content: center;
+    justify-content: center;
+}
+
+.banner-image-div{
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.banner-overlay-div{
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.banner-text-div{
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+/*To overcome shortcoming of stretching of image*/
+.banner-image{
+    display: grid;
+    min-width: 350px;
+    width: 100%; /* fit to width of browser */
+    height: 100%; /* fit to height of browser */
+    object-fit: cover; /* To cover image rather than stretch */
+}
+
+.banner-overlay-div{
+    display: grid;
+    max-width: 100%;
+    /* Generate it from CSS Gradient IO*/
+    background: black;
+    background: linear-gradient(
+            60deg,
+            rgba(0, 0, 0, 0.7777485994397759) 30%,
+            rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.banner-text-div{
+    display: grid;
+    align-items: center;
+    /*justify-items: center;*/
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.banner-h1-text{
+    font-size: calc(10pt + 0.15vw);
+    letter-spacing: 0.05em;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: white;
+}
+
+.banner-body-text{
+    font-size: calc(10pt + 0.15vw);
+    margin-top: 0.5em;
+    color: white;
+    text-decoration: none;
+}
+
+.banner-btn{
+    margin-top: 1em;
+}
+
+.banner-btn-item{
+    font-size: calc(8pt + 0.15vw);
+    padding: calc(0.5em + 0.08vw);
+    color: blue;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid white;
+    background-color: white;
+}
+
+.banner-btn-item:link{
+    text-decoration: none;
+}
+
+.banner-btn-item:visited{
+    text-decoration: none;
+}
