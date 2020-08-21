@@ -24,4 +24,18 @@ router.get('/banner', (req, res) => {
     });
 });
 
+router.get('/navbar', (req, res) => {
+    res.render('pages/refs/navbar', {
+        title: 'Navbar',
+        scripts: [
+            ...commonJs,
+            '/js/refs/navbar.js'
+        ],
+        styles: [
+            ...commonCss,
+            '/css/refs/navbar.css'
+        ]
+    });
+})
+
 module.exports = router;

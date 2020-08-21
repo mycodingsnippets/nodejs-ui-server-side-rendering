@@ -1,3 +1,4 @@
+/*Overall styling of page*/
 .top-banner-section{
     display: grid;
     grid-template-columns: 1fr; /* Stretch to full frame of browser (length wise) => may not work on image so deal with it separately */
@@ -8,6 +9,8 @@
     justify-content: center;
 }
 
+/*Specifies Layout of Elements/Sections*/
+/*Can be generated from https://cssgrid-generator.netlify.app/*/
 .banner-image-div{
     grid-area: 1 / 1 / 2 / 2;
 }
@@ -29,6 +32,7 @@
     object-fit: cover; /* To cover image rather than stretch */
 }
 
+/*Individual Elements Styling*/
 .banner-overlay-div{
     display: grid;
     max-width: 100%;
