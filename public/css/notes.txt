@@ -2,6 +2,6 @@
    rem should be used for font size management which depends on root element font which should be specified in %. (Eg Resource - Thapa Technical)
    Medias (images/videos) can be make responsive using %. (Eg Resource - Flatiron School Notes)
 
-2) Grid Systems layout for anything are much easier to implement, faster to execute.
+2) Grid Systems/Flexbox layout for anything are much easier to implement, faster to execute.
    They can also be made responsive much easily.
    They also overcome usage of tables, floats and positioning in css.

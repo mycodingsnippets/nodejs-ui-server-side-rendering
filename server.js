@@ -5,6 +5,8 @@ require('dotenv').config();
 
 //Routes
 const refs = require('./routes/refs/index');
+const ecommerce = require('./routes/ecommerce/index');
+const main = require('./routes/main/index');
 
 const app = express();
 
@@ -19,6 +21,8 @@ app.use(express.static(path.join(__dirname,'public')));
 
 //Routing Middlewares
 app.use('/refs', refs);
+app.use('/ecommerce', ecommerce);
+app.use('/', main);
 
 app.listen(4400, () => {
    console.log(`Server is starting at port 4400`);
