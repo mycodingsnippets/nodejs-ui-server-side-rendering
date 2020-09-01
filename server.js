@@ -8,6 +8,9 @@ const refs = require('./routes/refs/index');
 const ecommerce = require('./routes/ecommerce/index');
 const main = require('./routes/main/index');
 
+//Services
+const dummyService = require('./services/dummyService');
+
 const app = express();
 
 app.set('view engine', 'hbs');
@@ -23,6 +26,7 @@ app.use(express.static(path.join(__dirname,'public')));
 app.use('/refs', refs);
 app.use('/ecommerce', ecommerce);
 app.use('/', main);
+app.use('/api', dummyService);
 
 app.listen(4400, () => {
    console.log(`Server is starting at port 4400`);
