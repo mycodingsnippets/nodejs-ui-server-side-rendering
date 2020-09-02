@@ -1,4 +1,4 @@
-const indexModel = require('../../models/main/index');
+const indexModel = require('../../data/main/index');
 
 const commonCss = [];
 const commonJs = [];

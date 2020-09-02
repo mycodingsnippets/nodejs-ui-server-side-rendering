@@ -1,7 +1,10 @@
 const express = require('express');
 const expbs = require('express-handlebars');
 const path = require('path');
-require('dotenv').config();
+const morgan = require('morgan');
+require('dotenv').config({
+    path: './config/config.env'
+});
 
 //Routes
 const refs = require('./routes/refs/index');
@@ -12,7 +15,13 @@ const main = require('./routes/main/index');
 const dummyService = require('./services/dummyService');
 
 const app = express();
+const PORT = process.env.PORT || 4400;
 
+if(process.env.NODE_ENV === 'development'){
+    app.use(morgan('dev'));
+}
+
+//Handlebars
 app.set('view engine', 'hbs');
 app.engine('hbs', expbs({
     defaultLayout: 'main',
@@ -27,7 +36,8 @@ app.use('/refs', refs);
 app.use('/ecommerce', ecommerce);
 app.use('/', main);
 app.use('/api', dummyService);
+app.use('/story-book', require('./routes/storyBook'));
 
-app.listen(4400, () => {
-   console.log(`Server is starting at port 4400`);
+app.listen(PORT, () => {
+   console.log(`Server is starting at port ${process.env.PORT}`);
 });
