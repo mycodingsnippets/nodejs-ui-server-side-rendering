@@ -1,3 +1,31 @@
+{{> storyBook/_header}}
+{{> storyBook/_addBtn}}
 <div class="container">
-
+    <h6>Dashboard</h6>
+    <h3>Welcome {{name}}</h3>
+    {{#if stories}}
+        <p>Here are your stories:</p>
+        <table class="striped">
+            <theead>
+                <tr>
+                    <th>Title</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </theead>
+            <tbody>
+                {{#each stories}}
+                    <tr>
+                        <td><a href="/story-book/stories/{{_id}}">{{title}}</a></td>
+                        <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
+                        <td><span class="dash-status">{{status}}</span></td>
+                        <td></td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    {{else}}
+        <p>You have not created any stories</p>
+    {{/if}}
 </div>
