@@ -18,7 +18,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 //Handlebars
-const { formatDate, stripTags, truncate } = require('./helpers/hbs');
+const { formatDate, stripTags, truncate, editIcon, select } = require('./helpers/hbs');
 app.set('view engine', 'hbs');
 app.engine('hbs', expbs({
     defaultLayout: 'main',
@@ -28,7 +28,9 @@ app.engine('hbs', expbs({
     helpers: {
         formatDate,
         stripTags,
-        truncate
+        truncate,
+        editIcon,
+        select
     }
 }));
 app.use(express.static(path.join(__dirname,'public')));
