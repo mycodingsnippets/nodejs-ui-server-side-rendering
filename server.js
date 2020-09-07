@@ -37,9 +37,8 @@ app.use(express.static(path.join(__dirname,'public')));
 
 //Routing Middlewares
 app.use('/', require('./routes/main/index'));
-app.use('/refs', require('./routes/refs/index'));
-app.use('/ecommerce', require('./routes/ecommerce/index'));
 app.use('/api', require('./services/dummyService'));
+app.use('/reference', require('./routes/reference/index'));
 app.use(function (req, res, next) {
     if(req.url.startsWith('/story-book')){
         require('./routes/storyBook/index')(app);
