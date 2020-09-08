@@ -1,0 +1,2 @@
+npx react-native init learning
+npx react-native run-android

@@ -37,7 +37,6 @@ app.use(express.static(path.join(__dirname,'public')));
 
 //Routing Middlewares
 app.use('/', require('./routes/main/index'));
-app.use('/api', require('./services/dummyService'));
 app.use('/reference', require('./routes/reference/index'));
 app.use(function (req, res, next) {
     if(req.url.startsWith('/story-book')){
@@ -45,6 +44,8 @@ app.use(function (req, res, next) {
     }
     next();
 });
+//Services
+app.use('/api', require('./services/dummyService'));
 
 app.listen(PORT, () => {
    console.log(`Server is starting at port ${process.env.PORT}`);
