@@ -1,6 +1,6 @@
 import Fetch from 'isomorphic-unfetch';
-import Layout from "../components/Layout";
-import Prices from "../components/Prices";
+import Layout from "../../components/bitcoin/Layout";
+import Prices from "../../components/bitcoin/Prices";
 
 const Index = (props) => (
     <Layout>
