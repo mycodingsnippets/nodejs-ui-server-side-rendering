@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
 import './App.css';
-import Parent from "./components/covidApp/Parent";
+import AutoCompleteText from "./components/uiElems/AutoCompleteText";
 
 class App extends Component{
   render() {
     return (
-        <Parent/>
+        <>
+          <h1>dotcomengineer</h1>
+          <AutoCompleteText/>
+        </>
     );
   }
 }
